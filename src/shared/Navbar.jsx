@@ -61,18 +61,18 @@ export const Navbar = () => {
         <Container maxWidth='xl'>
           <Toolbar
             disableGutters
-            sx={{ display: 'flex', justifyContent: 'center', gap: '20px', my: 1 }}
+            sx={{ display: 'flex', justifyContent: 'center', gap: '10px', my: 1 }}
           >
             {/* <RoofingIcon fontSize='large' sx={{ mr: 1 }} /> */}
             <BusinessIcon fontSize='large' sx={{ mr: 1 }} />
             <Typography sx={{
               bgcolor: 'background.paper',
-              boxShadow: 20,
-              borderRadius: 2,
-              p: 2,
-              minWidth: 20,
-            }} variant='h4' color='primary'>Store</Typography>
-            <MenuItem >
+              boxShadow: 10,
+              borderRadius: 5,
+              p: 1,
+              minWidth: 10,
+            }} variant='h6' color='primary'>Store</Typography>
+            <MenuItem sx={{ borderRadius: 3 }}>
               <NavLink
                 className='color'
                 to="/home"
@@ -80,7 +80,7 @@ export const Navbar = () => {
                 Inicio
               </NavLink>
             </MenuItem>
-            <MenuItem>
+            <MenuItem sx={{ borderRadius: 3 }}>
               <NavLink
                 className='color'
                 to="/products"
@@ -88,7 +88,7 @@ export const Navbar = () => {
                 Productos
               </NavLink>
             </MenuItem>
-            <MenuItem>
+            <MenuItem sx={{ borderRadius: 3 }}>
               <NavLink
                 className='color'
                 to="/contact"
