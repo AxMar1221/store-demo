@@ -35,3 +35,13 @@
 .read-the-docs {
   color: #888;
 }
+.footer {
+  padding: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.avatar-github {
+  border-radius: 50%;
+  width: 5%;
+}
