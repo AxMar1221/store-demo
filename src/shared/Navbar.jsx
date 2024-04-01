@@ -1,7 +1,8 @@
-import RoofingIcon from '@mui/icons-material/Roofing';
+// import RoofingIcon from '@mui/icons-material/Roofing';
+import BusinessIcon from '@mui/icons-material/Business';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import SearchIcon from '@mui/icons-material/Search';
-import { AppBar, Container, InputBase, MenuItem, Toolbar, Typography} from "@mui/material"
+import { AppBar, Container, InputBase, MenuItem, Toolbar, Typography } from "@mui/material"
 import { styled, alpha } from '@mui/material/styles';
 import { NavLink } from 'react-router-dom';
 
@@ -52,26 +53,48 @@ export const Navbar = () => {
     <>
       <AppBar color="primary">
         <Container maxWidth='xl'>
-          <Toolbar 
-            disableGutters 
-            sx={{ display: 'flex', justifyContent: 'center', gap: '20px', my: 1}}
+          <Toolbar
+            disableGutters
+            sx={{ display: 'flex', justifyContent: 'center', gap: '20px', my: 1 }}
           >
-            <RoofingIcon fontSize='large' sx={{ mr: 1 }} />
-            <Typography>Navbar</Typography>
+            {/* <RoofingIcon fontSize='large' sx={{ mr: 1 }} /> */}
+            <BusinessIcon fontSize='large' sx={{ mr: 1 }} />
+            <Typography sx={{
+              bgcolor: 'background.paper',
+              boxShadow: 20,
+              borderRadius: 2,
+              p: 2,
+              minWidth: 20,
+            }} variant='h4' color='primary'>Store</Typography>
             <MenuItem >
-              <NavLink className='color'>Inicio</NavLink>
+              <NavLink
+                className='color'
+                to="/home"
+              >
+                Inicio
+              </NavLink>
             </MenuItem>
             <MenuItem>
-              <NavLink className='color'>Productos</NavLink>
+              <NavLink
+                className='color'
+                to="/products"
+              >
+                Productos
+              </NavLink>
             </MenuItem>
             <MenuItem>
-              <NavLink className='color'>Contacto</NavLink>
+              <NavLink
+                className='color'
+                to="/contact"
+              >
+                Contacto
+              </NavLink>
             </MenuItem>
             <Search>
               <SearchIconWrapper>
-                <SearchIcon fontSize='medium' sx={{mr: 1}}/>
+                <SearchIcon fontSize='medium' sx={{ mr: 1 }} />
               </SearchIconWrapper>
-              <StyledInputBase 
+              <StyledInputBase
                 placeholder='Buscar...'
                 inputProps={{ 'aria-label': 'search' }}
               />

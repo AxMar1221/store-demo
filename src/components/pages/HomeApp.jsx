@@ -4,11 +4,11 @@ export const HomeApp = () => {
   return (
     <>
         <Typography
-            variant="h1"
+            variant="h3"
             color="primary"
             sx={{ alignContent: 'center'}}
         >
-            Home 
+            Inicio
         </Typography>
     </>
   )
