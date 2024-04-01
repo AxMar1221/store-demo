@@ -30,6 +30,11 @@ export const ContactoPage = () => {
 
   const handleSubmit = (name, number, email, message) => {
     console.log(name, number, email, message);
+    setName('');
+    setPhone('');
+    setEmail('');
+    setMessage('');
+    setIsPhoneValid(false);
   }
   return (
     <div className="container">
@@ -52,6 +57,7 @@ export const ContactoPage = () => {
                     variant="outlined"
                     color="error"
                     helperText="Campo obligatorio"
+                    value={name}
                     onChange={(ev) => setName(ev.target.value)}
                   />
                 </Grid>
@@ -68,6 +74,7 @@ export const ContactoPage = () => {
                     variant="outlined"
                     color="error"
                     helperText="Campo obligatorio"
+                    value={phone}
                     onChange={validatePhone}
                   />
                 </Grid>
@@ -83,6 +90,7 @@ export const ContactoPage = () => {
                     variant="outlined"
                     color="error"
                     helperText="Campo obligatorio"
+                    value={email}
                     onChange={(ev) => setEmail(ev.target.value)}
                   />
                 </Grid>
@@ -96,6 +104,7 @@ export const ContactoPage = () => {
                     fullWidth
                     variant="outlined"
                     color="error"
+                    value={message}
                     onChange={(ev) => setMessage(ev.target.value)}
                   />
                 </Grid>
