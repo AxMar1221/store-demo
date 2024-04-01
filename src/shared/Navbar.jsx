@@ -48,6 +48,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+const searchTerm = (e) => {
+  e.preventDefault();
+  const textValue = e.target.value;
+  console.log(textValue)
+}
+
 export const Navbar = () => {
   return (
     <>
@@ -97,6 +103,7 @@ export const Navbar = () => {
               <StyledInputBase
                 placeholder='Buscar...'
                 inputProps={{ 'aria-label': 'search' }}
+                onChange={searchTerm}
               />
             </Search>
             <ConstructionIcon fontSize='large' sx={{ mr: 1 }} />
