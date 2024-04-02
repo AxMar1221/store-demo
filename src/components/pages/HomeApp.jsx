@@ -11,7 +11,7 @@ export const HomeApp = () => {
 
   return (
     <div className="container mt-4">
-      <Grid container spacing={1}>
+      <Grid spacing={2}>
         <Grid
           item
           xs='12'
