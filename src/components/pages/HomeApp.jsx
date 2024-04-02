@@ -61,13 +61,13 @@ export const HomeApp = () => {
         </Grid>
         <Grid
           item
-          xs='12'
+          padding='10px'
         >
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1039.0446991111683!2d-98.21910855491046!3d19.027991036813514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2smx!4v1711993063925!5m2!1sen!2smx"
             width="750"
             height="450"
-            // allowFullScreen
+            allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />

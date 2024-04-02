@@ -1,6 +1,7 @@
 import { Box, Button, Card, CardContent, Grid, TextField, Typography } from "@mui/material"
 import { SendRounded } from "@mui/icons-material";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 export const ContactoPage = () => {
 
@@ -35,7 +36,27 @@ export const ContactoPage = () => {
     setEmail('');
     setMessage('');
     setIsPhoneValid(false);
+    
+    Swal.fire({
+      title: "¿Enviar mensaje?",
+      text: "Esta acción no se puede cancelar!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "enviar"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Enviado",
+          text: "Tus datos y mensaje se han compartido con éxito.",
+          icon: "success"
+        });
+      }
+    });
   }
+
+
   return (
     <div className="container">
       <Typography color="primary" variant='h5' align="center">
