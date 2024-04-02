@@ -39,12 +39,12 @@ export const ContactoPage = () => {
     
     Swal.fire({
       title: "¿Enviar mensaje?",
-      text: "Esta acción no se puede cancelar!",
+      text: 'Esta acción no se puede cancelar!',
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "enviar"
+      confirmButtonText: "Enviar"
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire({
