@@ -49,7 +49,7 @@ export const ProductosPage = () => {
             >
                 Productos
             </Typography>
-            <TableContainer component={Paper} sx={{ width: '100%', overflowX: 'auto', padding: '10px', marginBottom: '20px' }}>
+            <TableContainer component={Paper} elevation={6} square={false} sx={{ width: '100%', overflowX: 'auto', padding: '10px', marginBottom: '20px' }}>
                 <Table sx={{ maxWidth: 950, height: 550 }}>
                     <TableHead>
                         <TableRow sx={{ bgcolor: 'whitesmoke' }}>
